@@ -5,10 +5,11 @@ body {
     flex-direction: column;
     height: 100vh;
     margin: 0;
+    background-color: antiquewhite;
 }
 
 .d-none {
-    display: none;
+    display: none !important;
 }
 
 .player-panel {
@@ -54,6 +55,10 @@ table {
     border-collapse: collapse;
 }
 
+.table-container {
+    position: relative;
+}
+
 td {
     position: relative;
     border: 5px solid rgba(0, 0, 0, 1);
@@ -81,4 +86,94 @@ table tr:last-child td {
     width: 100px;
     top: 16.5px;
     left: 16.5px;
+}
+
+.horizontal-line {
+    height: 10px;
+    width: 420px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    transform: scaleX(0.0);
+    transition: transform 225ms ease-in-out;
+    z-index: 1;
+}
+
+.vertical-line {
+    transform: rotate(90deg) scaleX(0.0);
+    top: 200px;
+}
+
+.end-screen {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    left: 0;
+    background-color: black;
+    z-index: 2;
+    animation: zoomIn 225ms ease-in-out;
+}
+
+.game-over {
+    position: absolute;
+    animation: zoomIn 225ms ease-in-out;
+    z-index: 3;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.restart-btn {
+    border: 0;
+    background-color: rgb(251, 245, 67);
+    z-index: 3;
+    width: 300px;
+    height: 100px;
+    font-size: 36px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    position: absolute;
+    bottom: 100px;
+    padding: 0;
+}
+
+.restart-btn:hover {
+    animation-name: animeHover;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animeHover {
+    0% {
+        background-color: rgb(251, 245, 67);
+    }
+
+    25% {
+        background-color: rgb(0, 255, 255);
+    }
+
+    50% {
+        background-color: rgb(255, 0, 255);
+    }
+
+    75% {
+        background-color: rgb(253, 0, 45);
+    }
+
+
+    100% {
+        background-color: rgb(255, 255, 255);
+    }
+
+
 }
