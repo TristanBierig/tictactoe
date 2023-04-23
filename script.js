@@ -63,6 +63,7 @@ function draw() {
 
 function checkForWin() {
     let winner;
+    // Checks for winner
     if (fields[0] == fields[1] && fields[1] == fields[2] && fields[0]) {
         winner = fields[0];
         document.getElementById('line-1').style.transform = 'scaleX(1)';
@@ -103,12 +104,18 @@ function checkForWin() {
         document.getElementById('line-8').style.transform = 'rotate(-45deg) scaleX(1.2)';
     }
 
-    // Executes after winning or draw
-    // if (fields[0] && fields[1] && fields[2] && fields[3] && fields[4] && fields[5] && fields[6] && fields[7] && fields[8] || winner) {
-    //     winningCondition();
-    // }
 
-    if (fields.length === 9 && fields.every(str => str !== "") || winner) {
+    // Checks for Draw
+    let allFieldsAreTrue = true;
+    for (let i = 0; i < fields.length; i++) {
+        if (!fields[i]) {
+            allFieldsAreTrue = false;
+            break;
+        }
+    }
+
+    // Executes GameOver Screen if Draw or Win
+    if (allFieldsAreTrue && fields.length === 9 || winner) {
         winningCondition();
     }
 }
