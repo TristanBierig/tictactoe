@@ -104,7 +104,11 @@ function checkForWin() {
     }
 
     // Executes after winning or draw
-    if (fields[0] && fields[1] && fields[2] && fields[3] && fields[4] && fields[5] && fields[6] && fields[7] && fields[8] || winner) {
+    // if (fields[0] && fields[1] && fields[2] && fields[3] && fields[4] && fields[5] && fields[6] && fields[7] && fields[8] || winner) {
+    //     winningCondition();
+    // }
+
+    if (fields.length === 9 && fields.every(str => str !== "") || winner) {
         winningCondition();
     }
 }
