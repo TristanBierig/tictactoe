@@ -12,6 +12,12 @@ body {
     display: none !important;
 }
 
+#winner {
+    color: white;
+    padding: 36px;
+    font-size: 2rem;
+}
+
 .player-panel {
     display: flex;
     align-items: center;
@@ -90,7 +96,7 @@ table tr:last-child td {
 
 .horizontal-line {
     height: 10px;
-    width: 420px;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     transform: scaleX(0.0);
@@ -100,7 +106,7 @@ table tr:last-child td {
 
 .vertical-line {
     transform: rotate(90deg) scaleX(0.0);
-    top: 200px;
+    top: 49%;
 }
 
 .end-screen {
@@ -178,6 +184,32 @@ button {
     100% {
         background-color: rgb(255, 255, 255);
     }
+}
 
 
+
+/* Responsive Design */
+
+@media(max-width: 500px) {
+
+    .player-panel {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .player-panel img {
+        height: 1.8rem;
+    }
+
+    td {
+        width: 30vw;
+        height: 30vw;
+    }
+
+    .shape {
+        height: 80%;
+        width: 80%;
+        top: 10%;
+        left: 10%;
+    }
 }

@@ -16,6 +16,7 @@
 <body>
     <div id="end-screen" class="end-screen d-none">
         <img id="game-over" src="img/game-over.png" class="game-over d-none" alt="">
+        <span id="winner"></span>
         <button id="restart-btn" onclick="restart()" class="restart-btn">Restart</button>
     </div>
 
@@ -30,16 +31,16 @@
 
 
     <div class="table-container">
-        <div id="line-1" class="horizontal-line" style="top: 60px;"></div>
-        <div id="line-2" class="horizontal-line" style="top: 198px;"></div>
-        <div id="line-3" class="horizontal-line" style="top: 336px;"></div>
-        <div id="line-4" class="horizontal-line vertical-line" style="right: 132px;"></div>
-        <div id="line-5" class="horizontal-line vertical-line" style="left: -5px;"></div>
-        <div id="line-6" class="horizontal-line vertical-line" style="left: 133px;"></div>
+        <div id="line-1" class="horizontal-line" style="top: 15%;"></div>
+        <div id="line-2" class="horizontal-line" style="top: 48.5%;"></div>
+        <div id="line-3" class="horizontal-line" style="top: 82.5;"></div>
+        <div id="line-4" class="horizontal-line vertical-line" style="right: 34%;"></div>
+        <div id="line-5" class="horizontal-line vertical-line"></div>
+        <div id="line-6" class="horizontal-line vertical-line" style="left: 34%;"></div>
         <div id="line-7" class="horizontal-line vertical-line"
-            style="left: -6px; transform: rotate(45deg) scaleX(0.0);"></div>
+            style="transform: rotate(45deg) scaleX(0.0);"></div>
         <div id="line-8" class="horizontal-line vertical-line"
-            style="left: -6px; transform: rotate(-45deg) scaleX(0.0);"></div>
+            style="transform: rotate(-45deg) scaleX(0.0);"></div>
         <table>
             <tr>
                 <td onclick="fillShape(0)">
