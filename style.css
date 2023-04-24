@@ -54,7 +54,7 @@ td {
 }
 
 td:hover {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(199, 187, 172, 0.5);
 }
 
 table {
@@ -186,6 +186,24 @@ button {
     }
 }
 
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 8px;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(199, 187, 172);
+}
+
+footer a:hover {
+    color: rgb(174, 163, 150);
+}
 
 
 /* Responsive Design */
